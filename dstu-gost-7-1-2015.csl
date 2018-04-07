@@ -87,7 +87,7 @@
 					<text macro="author-first" suffix=" "/>
 					<text macro="section-title" suffix=" / "/>
 					<text macro="author-all" suffix=" // "/>
-					<group delimiter=". &#8212; ">
+					<group delimiter=". ">
 						<text macro="container-title"/>
 						<text macro="date"/>
 						<group delimiter=", ">
@@ -101,7 +101,7 @@
 					<text macro="author-first" suffix=" "/>
 					<text macro="section-title" suffix=" / "/>
 					<text macro="author-all" suffix=" // "/>
-					<group delimiter=". &#8212; ">
+					<group delimiter=". ">
 						<group delimiter=" / ">
 							<text macro="container-title" text-case="sentence"/>
 							<names variable="editor">
@@ -136,7 +136,7 @@
 				<else>
 					<text macro="author-first" suffix=" "/>
 					<text macro="section-title" suffix=" / "/>
-					<group delimiter=". &#8212; ">
+					<group delimiter=". ">
 						<group delimiter=" ; ">
 							<text macro="author-all"/>
 							<text macro="translator"/>
