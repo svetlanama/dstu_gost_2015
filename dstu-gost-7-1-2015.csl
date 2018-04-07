@@ -84,9 +84,9 @@
 			<text variable="citation-number" suffix=". "/>
 			<choose>
 				<if type="article-journal">
-					<text macro="author-first" suffix=" "/>
+					<text macro="author-all" suffix=". "/> <!-- display all authors not first only  -->
 					<text macro="section-title" suffix=" / "/>
-					<text macro="author-all" suffix=" // "/>
+					<!-- <text macro="author-all" suffix=" // "/>  remove repeated list of all authors -->
 					<group delimiter=". ">
 						<text macro="container-title"/>
 						<text macro="date"/>
@@ -98,9 +98,9 @@
 					</group>
 				</if>
 				<else-if type="chapter">
-					<text macro="author-first" suffix=" "/>
+					<text macro="author-first" suffix=". "/>
 					<text macro="section-title" suffix=" / "/>
-					<text macro="author-all" suffix=" // "/>
+					<!-- <text macro="author-all" suffix=" // "/> -->
 					<group delimiter=". ">
 						<group delimiter=" / ">
 							<text macro="container-title" text-case="sentence"/>
@@ -134,11 +134,11 @@
 					</date>
 				</else-if>
 				<else>
-					<text macro="author-first" suffix=" "/>
+					<text macro="author-all" suffix=". "/> <!-- <text macro="author-first" suffix=" "/> -->
 					<text macro="section-title" suffix=" / "/>
 					<group delimiter=". ">
 						<group delimiter=" ; ">
-							<text macro="author-all"/>
+							<!-- <text macro="author-all"/> -->
 							<text macro="translator"/>
 						</group>
 						<group delimiter=" : ">
