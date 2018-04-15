@@ -85,7 +85,7 @@
 			<choose>
 				<if type="article-journal">
 					<text macro="author-all" suffix=". "/> <!-- display all authors not first only  -->
-					<text macro="section-title" suffix=" / "/>
+					<text macro="section-title" suffix=". "/>
 					<!-- <text macro="author-all" suffix=" // "/>  remove repeated list of all authors -->
 					<group delimiter=". ">
 						<text macro="container-title"/>
