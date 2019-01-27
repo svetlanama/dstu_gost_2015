@@ -75,14 +75,7 @@
 		<text variable="title" text-case="sentence"/>
 	</macro>
 	<macro name="container-title">
-		<choose>
-			<if type="bill book graphic legal_case legislation motion_picture song" match="any">
-				<text variable="title" font-style="italic"/>
-			</if>
-			<else>
-				<text variable="container-title"/>
-			</else>
-		</choose>
+		<text variable="container-title"/>
 	</macro>
 	<macro name="date">
 		<date variable="issued">
@@ -119,14 +112,14 @@
 				</if>
 				<else-if type="legal_case regulation">
 					<text macro="author-all" suffix=". "/>
-					<text macro="section-title" suffix=": "/>
+					<text macro="section-title" suffix=" : "/>
 					<text variable="genre" suffix=". "/>
 					<names variable="authority">
 						<name/>
 						<institution form="short" reverse-order="true"/>
 					</names>
 					<group delimiter=". ">
-						<group delimiter=": ">
+						<group delimiter=" : ">
 							<text variable="publisher-place"/>
 							<group delimiter=", ">
 								<text variable="publisher"/>
@@ -138,16 +131,16 @@
 				</else-if>
 				<else-if type="book">
 					<text macro="author-all" suffix=". "/>
-					<text macro="section-title" suffix=": "/>
+					<text macro="section-title" suffix=" : "/>
 				  <text variable="genre" suffix=". "/>
 					<group delimiter=". ">
-						<group delimiter=": ">
+						<group delimiter=" : ">
 							<text macro="container-title" text-case="sentence"/>
 							<names variable="editor" prefix="/ за ред. ">
 								<name initialize-with=". " et-al-min="5" et-al-use-first="3" delimiter-precedes-last="never"/>
 							</names>
 						</group>
-						<group delimiter=": ">
+						<group delimiter=" : ">
 							<text variable="publisher-place"/>
 							<group delimiter=", ">
 								<text variable="publisher"/>
@@ -159,10 +152,10 @@
 				</else-if>
 				<else-if type="chapter">
 					<text macro="author-all" suffix=". "/>
-					<text macro="section-title" suffix=": "/>
+					<text macro="section-title" suffix=" : "/>
 				 <text variable="genre" suffix=". "/>
 					<group delimiter=". ">
-						<group delimiter=": ">
+						<group delimiter=" : ">
 							<text macro="container-title" text-case="sentence"/>
 							<names variable="editor" prefix="/ за ред. ">
 								<name initialize-with=". " et-al-min="5" et-al-use-first="3" delimiter-precedes-last="never"/>
@@ -180,8 +173,8 @@
 				</else-if>
 				<else-if type="thesis">
 					 <text macro="author-all" suffix=". "/>
-				  	<text macro="section-title" suffix=": "/>
-					  <text variable="genre" suffix=": "/>
+				  	<text macro="section-title" suffix=" : "/>
+					  <text variable="genre" suffix=" : "/>
 						<!-- <date variable="accessed">
 							<date-part name="day" form="numeric-leading-zeros" suffix="."/>
 							<date-part name="month" form="numeric-leading-zeros" suffix="."/>
@@ -217,9 +210,9 @@
 				<else-if type="paper-conference">
 					<text macro="author-all" suffix=". "/> <!-- <text macro="author-first" suffix=" "/> -->
 					<text macro="section-title" suffix=""/>
-			    <text variable="container-title" prefix=": " suffix=", " font-style="italic"/> <!-- Proc Title -->
+			    <text variable="container-title" prefix=" : " suffix=", "/> <!-- Proc Title -->
 					<group delimiter=". ">
-						<group delimiter="; ">
+						<group delimiter=" ; ">
 							<text macro="translator"/>
 						</group>
 						<group delimiter=" , ">
@@ -238,7 +231,7 @@
 				</else-if>
 				<else-if type="webpage">
 					<text macro="author-all" suffix=". "/>
-					<text macro="section-title" suffix=": "/>
+					<text macro="section-title" suffix=" : "/>
 			    <text variable="genre" suffix=". "/>
 					<text variable="URL" prefix="URL: "/>
 					<group delimiter=", " >
@@ -256,10 +249,10 @@
 					<text macro="author-all" suffix=". "/> <!-- <text macro="author-first" suffix=" "/> -->
 					<text macro="section-title" suffix=" / "/>
 					<group delimiter=". ">
-						<group delimiter="; ">
+						<group delimiter=" ; ">
 							<text macro="translator"/>
 						</group>
-						<group delimiter=": ">
+						<group delimiter=" : ">
 							<text variable="publisher-place"/>
 							<group delimiter=", ">
 								<text variable="publisher"/>
