@@ -13,20 +13,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <updated>2011-07-23T23:00:00+02:00</updated>
-	<summary> This style is an attempt to implement DSTU GOST 8302:2015 requirements. Only journal articles,
-			books and book chapters are thoroughly covered. Patents can also be handled with a minor trick.
-			Mendeley (as well as Zotero, I gess) poorly supports patents, so to generate good bibliographic
-			entries for patents one should substitute several Mendeley fields(see comments below). Though
-			the style is fairly generic, it was created by a chemist thus being science- and English-oriented.
-			I hope it might be helpfull for Ph. D. students as it fairly satisfies VAK requirements. Please feel
-			free to mail me your comments, suggestions and so on.
-
-			Patent bibliograpgy is as follows: Pat. "number" "country", IPC "international classification". "title" / "inventors"; "assignee". -
-											"application number" ; "priority date" ; "assigned".
-			To render all these elements use Mendeley's "City" for "country", "Source" for "international classification",
-			"Issuer" for "assignee", "Chapter" for "application number", "Edition" for "priority date - dd.mm.yy".
-
-	</summary>
+	<summary></summary>
     <rights>This work is based on the initial code developed by Mykhailo (Michael) Shevchuk m.shev4uk@gmail.com
 		http://www.docshyr.info/wp-content/uploads/dstu-gost-7-1-2006_ukr.csl which is licensed under a Creative Commons Attribution-Share Alike 3.0 License: http://creativecommons.org/licenses/by-sa/3.0/</rights>
 	</info>
